@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .recipeHeading {
+    @apply text-emerald-300 text-center text-5xl mb-16;
+  }
+
+  .tabs {
+    @apply flex justify-center mb-7;
+
+    .tablist {
+      @apply w-36 h-32 flex flex-col items-center justify-center gap-1 relative cursor-pointer;
+
+      svg {
+        @apply text-5xl;
+      }
+
+      span {
+        @apply text-xs;
+      }
+
+      &.active {
+        @apply bg-emerald-300;
+
+        svg {
+          @apply text-white;
+        }
+
+        span {
+          @apply text-white;
+        }
+      }
+    }
+  }
+
+  .recipe-banner {
+    @apply bg-indigo-900 p-14 text-white flex mb-16;
+
+    .left-col {
+      @apply w-1/2;
+
+      .badge {
+        @apply bg-emerald-300 p-2 rounded-sm mb-3 text-xs inline-block;
+      }
+
+      h1 {
+        @apply text-5xl mb-3;
+      }
+
+      p {
+        @apply text-lg mb-3;
+        strong {
+          @apply mr-4;
+        }
+      }
+
+      h3 {
+        @apply text-3xl mb-8;
+      }
+
+      .ingredients {
+        @apply flex gap-24;
+
+        ul {
+          @apply p-0 flex flex-wrap gap-10 mt-3 list-none;
+
+          li {
+            @apply flex items-center justify-center gap-3 text-lg;
+
+            svg {
+              @apply text-lg;
+            }
+
+            span {
+              @apply w-auto;
+            }
+          }
+        }
+      }
+    }
+
+    .right-col {
+      @apply w-1/2 pt-12 flex justify-center items-center;
+
+      .img-wrapper {
+        @apply w-80 h-80;
+
+        img {
+          @apply w-full h-full object-cover rounded-full;
+        }
+      }
+    }
+  }
+}
